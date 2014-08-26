@@ -5,6 +5,7 @@
 *.suo
 *.user
 *.sln.docstates
+*.ide
 
 # Build results
 [Dd]ebug/
@@ -172,3 +173,12 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# OS generated files 
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
