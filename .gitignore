@@ -7,6 +7,9 @@
 *.sln.docstates
 *.ide
 
+# Xamarin Studio / monodevelop user-specific
+*.userprefs
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -175,10 +178,25 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 # OS generated files 
-.DS_Store
-.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+
+
+# =========================
+# Windows detritus
+# =========================
+
+# Windows image file caches
 Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac desktop service store files
+.DS_Store
+.DS_Store?
