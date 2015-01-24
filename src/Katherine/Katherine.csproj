@@ -70,7 +70,6 @@
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Content\nancy-logo.png" />
     <Content Include="icon.png" />
     <Content Include="Web.config">
