@@ -57,6 +57,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Nancy.1.0.0\lib\net40\Nancy.dll</HintPath>
     </Reference>
+    <Reference Include="Nancy.Authentication.Forms">
+      <HintPath>..\packages\Nancy.Authentication.Forms.1.0.0\lib\net40\Nancy.Authentication.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="Nancy.Elmah">
       <HintPath>..\packages\Nancy.Elmah.0.1.8\lib\net40\Nancy.Elmah.dll</HintPath>
     </Reference>
