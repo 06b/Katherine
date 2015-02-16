@@ -2,9 +2,9 @@
 
 namespace Katherine.Modules
 {
-    public class IndexModule : NancyModule
+    public class HomeModule : NancyModule
     {
-        public IndexModule()
+        public HomeModule()
         {
             Get["/"] = parameters =>
             {
