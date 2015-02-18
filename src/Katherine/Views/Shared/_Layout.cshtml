@@ -1,0 +1,82 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)]><html class="no-js lt-ie10 lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)]><html class="no-js lt-ie10 lt-ie9"><![endif]-->
+<!--[if (IE 9)]><html class="no-js lt-ie10"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="cleartype" content="on">
+  @if (IsSectionDefined("meta"))
+  {
+    @RenderSection("meta")
+  }
+  else
+  {
+    <title>Katherine</title>
+  }
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+  <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+
+  <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+  <!--
+  <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+  -->
+
+
+  @if (IsSectionDefined("headblock"))
+  {
+    @RenderSection("headblock")
+  }
+
+  <!--[if lt IE 9]>
+  <script src="@Url.Content("~/Content/js/vendor/html5shiv-printshiv.min.js")"></script>
+  <![endif]-->
+
+</head>
+<body>
+
+  <!--[if lt IE 8]>
+           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+       <![endif]-->
+
+
+  @RenderBody()
+
+  @* Load CSS asynchronously *@
+  <script>
+    function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+    loadCSS("@Url.Content("~/Content/css/vendor/normalize.css")");
+    loadCSS("@Url.Content("~/Content/css/vendor/diagnosticss.css")");
+  </script>
+  <noscript>
+    <!-- Let's not assume anything -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/vendor/normalize.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/vendor/diagnosticss.css")" />
+  </noscript>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/Content/js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+
+  <script src="@Url.Content("~/Content/js/vendor/helper.js")"></script>
+  <script src="@Url.Content("~/Content/js/plugins.js")"></script>
+  <script src="@Url.Content("~/Content/js/vendor/safeQuery.min.js")"></script>
+  <script src="@Url.Content("~/Content/js/main.js")"></script>
+
+  @if (IsSectionDefined("scripts"))
+  {
+    @RenderSection("scripts")
+  }
+
+</body>
+</html>
