@@ -3,6 +3,9 @@ using Nancy.Bootstrapper;
 using Nancy.Elmah;
 using Nancy.TinyIoc;
 using ConfigR;
+using Nancy.Conventions;
+using Katherine.Core.Caching;
+using System;
 
 namespace Katherine
 {
@@ -13,6 +16,27 @@ namespace Katherine
         // For more information https://github.com/NancyFx/Nancy/wiki/Bootstrapper
 
 
+        /// <summary>
+        /// Configure Nancy conventions.
+        /// </summary>
+        protected override void ConfigureConventions(NancyConventions nancyConventions)
+        {
+            base.ConfigureConventions(nancyConventions);
+
+            /// <summary>
+            /// Expires Header to Static Content in NancyFx
+            /// Url: http://mike-ward.net/2014/01/13/adding-an-expires-header-to-static-content-in-nancyfx/
+            /// </summary>
+            nancyConventions.StaticContentsConventions.Clear();
+            var responseBuilder = StaticContentConventionBuilderAddOn
+                .AddDirectoryWithExpiresHeader("content", TimeSpan.FromDays(8));
+            nancyConventions.StaticContentsConventions.Add(responseBuilder);
+
+        }
+
+        /// <summary>
+        /// Application Startup
+        /// </summary>
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
 
