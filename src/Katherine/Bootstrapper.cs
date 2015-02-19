@@ -21,12 +21,12 @@ namespace Katherine
             base.ApplicationStartup(container, pipelines);
 
             /// <summary>
-            /// Elmah Logging - Enable Exception logging and select HttpStatusCode logging
+            /// Elmah Logging - Enable Exception logging with select HttpStatusCode logging
             /// </summary>
 
             //TODO: Secure Elmah
 
-            Elmahlogging.Enable(pipelines, "elmah", null, new HttpStatusCode[] { HttpStatusCode.NotFound, HttpStatusCode.InsufficientStorage, });
+            Elmahlogging.Enable(pipelines, "elmah", null, new HttpStatusCode[] { HttpStatusCode.NotFound, HttpStatusCode.InsufficientStorage, HttpStatusCode.InternalServerError });
 
         }
     }
