@@ -142,6 +142,7 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Core\Caching\StaticContentConventionBuilderAddOn.cs" />
     <Compile Include="Core\Data\ConnectionCheck.cs" />
+    <Compile Include="Core\Data\ShortGuid.cs" />
     <Compile Include="Core\Display\StringTrimHelper.cs" />
     <Compile Include="Core\Logging\LogError.cs" />
     <Compile Include="Core\Routing\UrlGenerator.cs" />
