@@ -6,7 +6,6 @@ namespace Katherine.Core.Logging
 {
     public static class ErrorLog
     {
-
         /// <summary>
         /// Manually Log errors to Elmah
         /// Source: http://stackoverflow.com/a/14770142
