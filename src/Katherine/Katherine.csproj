@@ -146,6 +146,7 @@
     <Compile Include="Core\Data\ShortGuid.cs" />
     <Compile Include="Core\Display\StringTrimHelper.cs" />
     <Compile Include="Core\Extensions\ExpandoObjectExtensions.cs" />
+    <Compile Include="Core\Handlers\ErrorStatusCodeHandler.cs" />
     <Compile Include="Core\Logging\LogError.cs" />
     <Compile Include="Core\Routing\UrlGenerator.cs" />
     <Compile Include="Core\Security\DatabaseUserMapper.cs" />
