@@ -148,6 +148,7 @@
     <Compile Include="Core\Extensions\ExpandoObjectExtensions.cs" />
     <Compile Include="Core\Logging\LogError.cs" />
     <Compile Include="Core\Routing\UrlGenerator.cs" />
+    <Compile Include="Core\Security\DatabaseUserMapper.cs" />
     <Compile Include="Models\KatherineEntry.cs" />
     <Compile Include="Models\KatherineRoute.cs" />
     <Compile Include="Models\KatherineUser.cs" />
