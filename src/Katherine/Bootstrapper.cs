@@ -1,10 +1,9 @@
-﻿using Nancy;
+﻿using Katherine.Core.Caching;
+using Nancy;
 using Nancy.Bootstrapper;
+using Nancy.Conventions;
 using Nancy.Elmah;
 using Nancy.TinyIoc;
-using ConfigR;
-using Nancy.Conventions;
-using Katherine.Core.Caching;
 using System;
 
 namespace Katherine
@@ -39,8 +38,6 @@ namespace Katherine
         /// </summary>
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
-
-            Config.Global.LoadScriptFile("Katherine.csx");
 
             base.ApplicationStartup(container, pipelines);
 
