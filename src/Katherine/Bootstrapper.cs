@@ -41,6 +41,8 @@ namespace Katherine
 
             base.ApplicationStartup(container, pipelines);
 
+            Nancy.Security.Csrf.Enable(pipelines);
+
             /// <summary>
             /// Elmah Logging - Enable Exception logging with select HttpStatusCode logging
             /// </summary>
