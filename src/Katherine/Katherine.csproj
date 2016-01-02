@@ -153,6 +153,8 @@
     <Content Include="Views\Codes\500.cshtml" />
     <Content Include="Views\Codes\DefaultError.cshtml" />
     <Content Include="Content\js\vendor\jquery-2.1.1.min.map" />
+    <Content Include="Views\Codes\DatabaseConnectionError.cshtml" />
+    <Content Include="Views\Codes\Maintenance.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
