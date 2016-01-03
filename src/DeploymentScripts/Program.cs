@@ -18,6 +18,7 @@ namespace DeploymentScripts
                 DeployChanges.To
                     .SqlDatabase(connectionString)
                     .WithScriptsEmbeddedInAssembly(Assembly.GetExecutingAssembly())
+                    .WithVariablesDisabled()
                     .LogToConsole()
                     .Build();
 
